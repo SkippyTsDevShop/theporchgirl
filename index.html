@@ -184,6 +184,7 @@
   }
   .style-card .photo{width:100%; aspect-ratio:4/5; overflow:hidden; background:var(--bg);}
   .style-card .photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .style-card .photo svg{width:100%; height:100%; display:block;}
   .style-card .photo.icon-tile{display:flex; align-items:center; justify-content:center; background:var(--bg);}
   .style-card .photo.icon-tile svg{width:56px; height:56px;}
   .style-card .body{padding:2px 20px 22px;}
@@ -395,8 +396,27 @@
         </div>
       </article>
       <article class="style-card">
-        <div class="photo icon-tile">
-          <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="16" height="16" rx="2" stroke="var(--accent-2)" stroke-width="3"/><rect x="26" y="18" width="16" height="16" rx="2" stroke="var(--accent)" stroke-width="3"/><path d="M22 22h4" stroke="var(--text-muted)" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <div class="photo">
+          <svg viewBox="0 0 320 400" role="img" aria-label="Two stacked moving boxes labeled Christmas Decor">
+            <rect width="320" height="400" fill="var(--bg)"/>
+            <ellipse cx="160" cy="360" rx="110" ry="14" fill="var(--ink)" opacity=".08"/>
+            <rect x="60" y="220" width="200" height="130" rx="6" fill="#dcc89a"/>
+            <rect x="60" y="220" width="200" height="130" rx="6" fill="none" stroke="#b89a63" stroke-width="2"/>
+            <path d="M60 220 L95 196 L225 196 L260 220 Z" fill="#cdb583" stroke="#b89a63" stroke-width="2"/>
+            <rect x="150" y="196" width="20" height="154" fill="var(--brass)" opacity=".6"/>
+            <rect x="90" y="110" width="150" height="115" rx="6" fill="#e8d8ae"/>
+            <rect x="90" y="110" width="150" height="115" rx="6" fill="none" stroke="#c1a877" stroke-width="2"/>
+            <path d="M90 110 L118 90 L212 90 L240 110 Z" fill="#dcc89a" stroke="#c1a877" stroke-width="2"/>
+            <rect x="157" y="90" width="16" height="135" fill="var(--brass)" opacity=".6"/>
+            <g transform="rotate(-5 165 165)">
+              <rect x="118" y="144" width="94" height="44" rx="5" fill="var(--cream)" stroke="var(--berry)" stroke-width="2.5"/>
+              <text x="165" y="163" text-anchor="middle" font-family="'Work Sans', sans-serif" font-weight="700" font-size="13" fill="var(--berry)" letter-spacing="0.5">CHRISTMAS</text>
+              <text x="165" y="180" text-anchor="middle" font-family="'Work Sans', sans-serif" font-weight="700" font-size="13" fill="var(--berry)" letter-spacing="1.5">DECOR</text>
+            </g>
+            <path d="M140 92 L165 78 L165 92 Z" fill="var(--accent)"/>
+            <path d="M190 92 L165 78 L165 92 Z" fill="var(--accent)"/>
+            <circle cx="165" cy="90" r="6" fill="var(--accent-2)"/>
+          </svg>
         </div>
         <div class="body">
           <h3>Mix It Up</h3>
@@ -541,7 +561,7 @@
         <h2 style="margin-bottom:16px;">A Northshore couple, on your porch and in your pool.</h2>
         <p>The Porch Girl Northshore is run by a husband-and-wife team based right here on the Northshore. We started decorating porches for neighbors and it turned into a season we look forward to every year.</p>
         <p>We also own and operate The Pool Guy Northshore — so keeping your home looking its best, in every season, is kind of our whole thing.</p>
-        <a class="pool-guy-chip" href="https://www.instagram.com/poolguy985" target="_blank" rel="noopener">
+        <a class="pool-guy-chip" href="https://www.thepoolguynorthshore.com/" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2M2 12s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/></svg>
           Sister company: The Pool Guy Northshore
         </a>
@@ -585,50 +605,21 @@
         <p style="font-size:.8rem; color:var(--text-muted); margin:0;">Already paid? Go ahead and fill out the porch details form below — we'll text you to lock in a time.</p>
       </div>
 
-      <form class="form-card" id="porchForm">
+      <div class="form-card">
         <h3>Tell us about your porch</h3>
         <p class="sub">Step 2 — takes about three minutes.</p>
-
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="field">
-          <label for="address">Address</label>
-          <input type="text" id="address" name="address" placeholder="Street, city" required>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-
-        <div class="field">
-          <label>Style you're drawn to (pick one or more)</label>
-          <div class="style-pick">
-            <label><input type="checkbox" name="style" value="Classic Red & Green"> Classic Red &amp; Green</label>
-            <label><input type="checkbox" name="style" value="Elegant Gold & Bronze"> Elegant Gold &amp; Bronze</label>
-            <label><input type="checkbox" name="style" value="Whimsical Candy Land"> Whimsical Candy Land</label>
-            <label><input type="checkbox" name="style" value="Mix It Up"> Mix It Up</label>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="photo">Photo of your house</label>
-          <input type="file" id="photo" name="photo" accept="image/*">
-        </div>
-
-        <div class="field">
-          <label for="notes">Must-haves, must-avoids, budget in mind</label>
-          <textarea id="notes" name="notes" placeholder="e.g. no inflatables, would love the railing done, budget around $700"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width:100%;">Send my porch details</button>
-        <div class="form-msg" id="formMsg">Thanks! That's everything we need to put together your estimate — we'll be in touch within 48 hours.</div>
-      </form>
+        <iframe
+          id="JotFormIFrame-262602216896057"
+          title="Porch Details Form"
+          onload="window.parent.scrollTo(0,0)"
+          allowtransparency="true"
+          allow="geolocation; microphone; camera; fullscreen; payment"
+          src="https://form.jotform.com/262602216896057"
+          frameborder="0"
+          style="width:100%; min-width:100%; max-width:100%; height:750px; border:none; border-radius:12px;"
+          scrolling="yes"
+        ></iframe>
+      </div>
     </div>
   </section>
 </main>
@@ -668,16 +659,15 @@
     });
   }catch(e){}
 
-  try{
-    var form = document.getElementById('porchForm');
-    var msg = document.getElementById('formMsg');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      msg.classList.add('show');
-      msg.scrollIntoView({behavior:'smooth', block:'nearest'});
-    });
-  }catch(e){}
 })();
+</script>
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+<script>
+  try{
+    if (window.jotformEmbedHandler) {
+      window.jotformEmbedHandler("iframe[id='JotFormIFrame-262602216896057']", "https://form.jotform.com/");
+    }
+  }catch(e){}
 </script>
 </body>
 </html>

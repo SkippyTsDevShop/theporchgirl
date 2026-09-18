@@ -5,13 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Porch Girl Northshore</title>
 <meta name="description" content="Christmas porch decorating, installed for you, serving Mandeville, Covington, Abita Springs &amp; Madisonville, Louisiana.">
-<link rel="canonical" href="https://theporchgirl.com/">
 <meta property="og:title" content="The Porch Girl Northshore">
 <meta property="og:description" content="Christmas porch decorating, installed for you on the Northshore. Any new decor is yours to keep.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://theporchgirl.com/">
-<meta property="og:image" content="https://theporchgirl.com/images/classic-red-bow.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="images/classic-red-bow.png">
+<meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%84%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -249,7 +247,8 @@
   /* ---------- WHO WE ARE ---------- */
   .who-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:52px; align-items:center;}
   @media (max-width:860px){.who-grid{grid-template-columns:1fr;}}
-  .who-art{background:var(--surface); border-radius:22px; border:1px solid var(--line); padding:26px; box-shadow:var(--shadow);}
+  .who-art{background:var(--surface); border-radius:22px; border:1px solid var(--line); overflow:hidden; box-shadow:var(--shadow);}
+  .who-art img{width:100%; height:100%; aspect-ratio:4/5; object-fit:cover; display:block;}
   .who-copy p{color:var(--text-muted); font-size:1.03rem; margin-bottom:16px; max-width:56ch;}
   .who-copy .sig{font-family:var(--font-display); font-style:italic; font-size:1.15rem; color:var(--text); margin-top:18px;}
   .pool-guy-chip{
@@ -535,14 +534,7 @@
   <section id="who" class="wrap">
     <div class="who-grid">
       <div class="who-art">
-        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="150" cy="150" r="140" fill="var(--bg)"/>
-          <path d="M60 240c0-40 30-64 90-64s90 24 90 64" fill="var(--green-700)" opacity=".85"/>
-          <circle cx="118" cy="128" r="30" fill="var(--brass)" opacity=".55"/>
-          <circle cx="182" cy="128" r="30" fill="var(--berry)" opacity=".45"/>
-          <path d="M96 240v-30M204 240v-30" stroke="var(--accent-2)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M40 250h220" stroke="var(--line)" stroke-width="2"/>
-        </svg>
+        <img src="images/about-couple.jpg" alt="The husband-and-wife team behind The Porch Girl Northshore">
       </div>
       <div class="who-copy">
         <p class="eyebrow">Who We Are</p>

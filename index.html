@@ -192,6 +192,19 @@
   .style-card h3{font-size:1.15rem; font-weight:600; margin-bottom:6px;}
   .style-card p{font-size:.92rem; color:var(--text-muted); margin:0;}
 
+  /* ---------- PAST WORK GALLERY ---------- */
+  .gallery-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  @media (max-width:920px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.gallery-grid{grid-template-columns:1fr;}}
+  .gallery-item{position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); aspect-ratio:4/5;}
+  .gallery-item img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease;}
+  .gallery-item:hover img{transform:scale(1.05);}
+  .gallery-item .cap{
+    position:absolute; left:0; right:0; bottom:0; padding:16px 16px 12px;
+    background:linear-gradient(to top, rgba(20,20,18,.72), rgba(20,20,18,0));
+    color:#fdfaf3; font-size:.85rem; font-weight:600; letter-spacing:.01em;
+  }
+
   /* ---------- BEYOND THE PORCH ---------- */
   .beyond-wrap{
     display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
@@ -284,7 +297,8 @@
     display:flex; flex-direction:column; gap:16px;
   }
   .consult-card .fee{font-family:var(--font-display); font-size:2.2rem; font-weight:600;}
-  .pay-row{display:flex; gap:10px; flex-wrap:wrap;}
+  .pay-row{display:flex; gap:12px; flex-wrap:wrap; align-items:center;}
+  .venmo-icon{width:46px; height:46px; border-radius:50%; object-fit:cover; border:1px solid var(--line); flex-shrink:0; box-shadow:var(--shadow);}
   .form-card{
     background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:28px; box-shadow:var(--shadow);
   }
@@ -329,6 +343,7 @@
     </a>
     <nav class="links" id="navLinks">
       <a href="#lookbook">Look Book</a>
+      <a href="#gallery">Past Work</a>
       <a href="#how">How It Works</a>
       <a href="#pricing">Pricing</a>
       <a href="#who">Who We Are</a>
@@ -423,6 +438,40 @@
           <p>Already have pieces you love? Bring your own decor and we'll style around it — use yours, use ours, or blend the two.</p>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section id="gallery" class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Past Work</p>
+      <h2>More from last season on the Northshore.</h2>
+      <p>A few more favorites from last year's installs — porches, doorways, and a couple of our nutcrackers making an appearance.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/gallery-whole-porch.jpg" alt="A full wraparound porch on a historic Northshore home, dressed with garland and red bows down every column">
+        <span class="cap">Whole-porch transformation</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-grand-entrance.jpg" alt="A front door framed in garland with candy canes, ornaments and gift-box accents, flanked by a nutcracker and flocked trees">
+        <span class="cap">Grand entrance</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-candy-cane-door.jpg" alt="A blue front door wrapped in red and white candy-cane ribbon garland with a matching wreath">
+        <span class="cap">Candy cane doorway</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-garland-bows.jpg" alt="Fresh garland with velvet red bows and berries strung along a row of white porch shutters">
+        <span class="cap">Garland &amp; bows</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-pastel-doorway.jpg" alt="A pastel candy-land themed doorway with a flocked wreath, sweets garland and a 'Tis the Season doormat">
+        <span class="cap">Pastel candy doorway</span>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-candy-nutcracker.jpg" alt="A pastel pink and blue nutcracker styled among candy ornaments and mini flocked trees">
+        <span class="cap">Candy land nutcracker</span>
+      </div>
     </div>
   </section>
 
@@ -600,9 +649,12 @@
           <p style="color:var(--text-muted); margin:10px 0 0; font-size:.85rem;">This fee is non-refundable — it acts as a deposit toward your total bill and holds you a spot on our calendar for the season.</p>
         </div>
         <div class="pay-row">
+          <img class="venmo-icon" src="images/venmo-icon.jpg" alt="The Porch Girl Northshore Venmo profile icon">
           <a class="btn btn-ghost" href="https://venmo.com/u/porchgirl985" target="_blank" rel="noopener">Pay with Venmo &mdash; @porchgirl985</a>
         </div>
+        <p style="font-size:.8rem; color:var(--text-muted); margin:0;">Don't have Venmo? No problem — just fill out the form below and we'll follow up about other payment methods we accept.</p>
         <p style="font-size:.8rem; color:var(--text-muted); margin:0;">Already paid? Go ahead and fill out the porch details form below — we'll text you to lock in a time.</p>
+        <p style="font-size:.8rem; color:var(--text-muted); margin:0;">Questions first? DM us on Instagram <a href="https://www.instagram.com/porchgirl985/" target="_blank" rel="noopener" style="color:var(--accent-2); font-weight:600;">@porchgirl985</a> — happy to help.</p>
       </div>
 
       <div class="form-card">
